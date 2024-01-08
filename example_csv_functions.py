@@ -32,8 +32,8 @@ def show_screen(st, nb_entries):
     aList = st.session_state.get('aList', None)
     
     if nb_entries < 5 and len(aList) > 0:
-        # french_word = aList.pop()
-        french_word = aList[nb_entries]
+        french_word = aList.pop()
+        # french_word = aList[nb_entries]
         st.session_state['aList'] = aList
 
         user_input = st.text_input(f"Translate '{french_word}':")
